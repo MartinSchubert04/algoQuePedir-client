@@ -44,9 +44,8 @@ npm run dev
 # or
 yarn run dev
 ```
-
+## Proyect Structure
 ```bash
-tree src
 src
 ├── api/                  # Modules for interacting with the backend API (HTTP clients)
 │   └── api.ts
