@@ -1,73 +1,76 @@
-# React + TypeScript + Vite
-![coverage](./badges/coverage/coverage.svg)
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Algo Que Pedir Client
 
-Currently, two official plugins are available:
+The client-side frontend application for the "Algo Que Pedir" platform. This repository hosts the user interface developed using modern standards and tooling.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Project Description
 
-## React Compiler
+This is the official client repository, implementing the visual interface and user experience for the "Algo Que Pedir" service. It is a single-page application (SPA) built to communicate with a corresponding backend API.
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+## Technologies
 
-## Expanding the ESLint configuration
+* **Framework:** React
+* **Language:** TypeScript
+* **Build Tool:** Vite
+* **Styling:** CSS
+* **Linting/Formatting:** ESLint and Prettier
+* **Testing:** Playwright (for End-to-End tests)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Getting Started
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Prerequisites
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+Ensure you have Node.js (version specified in `.nvmrc` if present) and npm/yarn installed.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Installation
+
+1.  Clone the repository:
+    ```bash
+    git clone [https://github.com/MartinSchubert04/algoQuePedir-client.git](https://github.com/MartinSchubert04/algoQuePedir-client.git)
+    cd algoQuePedir-client
+    ```
+2.  Install dependencies:
+    ```bash
+    npm install
+    # or
+    yarn install
+    ```
+
+### Development
+
+To run the application
+
+```bash
+npm run dev
+# or
+yarn run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+tree src
+src
+├── api/                  # Modules for interacting with the backend API (HTTP clients)
+│   └── api.ts
+├── assets/               # Static files such as images, fonts, and global styles
+│   ├── logo.svg
+│   └── styles/
+│       └── main.css
+├── components/           # Reusable React components (e.g., Button, Card)
+│   ├── common/           # Atomic or general-purpose components
+│   ├── layout/           # Structural components (Header, Footer, Sidebar)
+│   └── specific/         # Components specific to a view/page
+├── hooks/                # Custom React Hooks for reusable state logic
+│   └── useAuth.ts
+├── pages/                # High-level components representing routes/views
+│   ├── Home.tsx
+│   ├── Products.tsx
+│   └── Profile.tsx
+├── context/              # React Contexts for global state management
+│   └── AuthContext.tsx
+├── types/                # TypeScript type and interface definitions
+│   └── global.d.ts
+├── utils/                # Auxiliary utility functions
+│   └── formatters.ts
+├── App.tsx               # Main application component
+├── main.tsx              # Application entry point (DOM rendering)
+└── vite-env.d.ts         # Environment types generated by Vite
 ```
