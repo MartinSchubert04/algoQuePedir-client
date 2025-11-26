@@ -1,0 +1,10 @@
+.preference-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.goto-preference-button{
+    background-color: transparent;
+    border: none;
+}

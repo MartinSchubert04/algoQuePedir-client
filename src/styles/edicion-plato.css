@@ -1,0 +1,256 @@
+@import url("global.css");
+@import url("Main-container.css");
+
+html {
+  height: 100%;
+}
+
+/* main section (funcion padre) - quedó como costos xq la reutilicé */
+.costos-section {
+  background: var(--color-secundario);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  margin-top: 1.5rem;
+  align-self: center;
+  width: 100%;
+  max-width: 1092px;
+  box-sizing: border-box;
+}
+
+/* EDITAR PLATO (cuadrito) */
+
+.costos-section h1 {
+  font-size: 40px;
+  margin-left: 1rem;
+}
+
+.grid-editar-plato {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* izquierda inputs, derecha imagen */
+  gap: 1.5rem;                  
+  align-items: stretch;          /* ambas columnas ocupan la misma altura */
+  margin-top: 1rem;            
+  font-size: 0.95em;
+}
+
+.inputs-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 1rem; 
+  height: 100%; /* fuerza a ocupar toda la altura de la celda */
+}
+
+/* Descripción se expande para llenar el espacio sobrante */
+.inputs-column .input-group:nth-child(2) {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.inputs-column .input-group:nth-child(2) textarea {
+  flex-grow: 1;
+  resize: none; /* opcional: evita que el usuario rompa el layout estirando */
+}
+
+/* URL siempre al fondo */
+.inputs-column .input-group:last-child {
+  margin-top: auto;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  padding-left: 1em;
+}
+
+/* el archivo de Icon, hace q el input desaparezca */
+.input-group input{
+  display: block;
+}
+
+.input-text-edi-plato {
+  width: 100%;
+  padding: 0.75em 1em;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: var(--main-font, 'Roboto', sans-serif);
+  background-color: var(--color-secundario);
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
+}
+
+.input-text-edi-plato:focus {
+  outline: none;
+  border-color: var(--color-primario-sombra);         
+}
+
+textarea.input-text-edi-plato {
+  line-height: 1.5;
+  min-height: 11rem;  
+}
+
+/* Imagen */
+.dish-image {
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.imagen-plato {
+  border-radius: 20px;
+  object-fit: cover; /* se ajusta sin deformar */
+  max-width: 400px;
+  max-height: 250px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+/* COSTOS (cuadrito) */
+.costos-section h3 {
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.costos-section h4 {
+  font-style: italic;
+  margin-bottom: 1rem;
+  font-weight: 400;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group input:focus {
+  outline: none;            
+  border: 1.5px solid var(--color-primario-sombra); 
+}
+
+
+/* el archivo de Icon, hace q el input desaparezca */
+.form-group input{
+  display: block;
+  transition: border-color 0.3s ease;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+.form-toggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form-toggle label {
+  font-weight: 500;
+}
+
+.form-toggle p {
+  font-size: 0.85rem;
+  color: var(--color-verde);
+  margin: 0 1rem 1rem 0;
+}
+
+/* posicionamiento del switch */
+.costos-section .container-switch {
+  width: auto;     
+  margin: 0;        
+  justify-content: flex-end;
+}
+
+.header-ingredientes {
+  border-bottom: 2px solid #ddd;
+}
+
+.ingrediente {
+  border-top: 2px solid #ddd;
+}
+
+.pos-can-container{ /*experimental* -> antes:: jc: flex start | despues:: jc: center*/
+  justify-content: center;
+}
+
+@media (max-width: 500px) { /* le puse 500px asi queda responsive a resoluciones > 430px */
+  .main-container{
+  padding: 0vh;
+}  
+
+  .costos-section {
+    border-radius: 12px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    margin: 1rem;
+    align-self: center;
+    width: 90%;
+    box-sizing: border-box;
+  }
+
+  .costos-section h1 {
+    font-size: 25px;
+  }
+
+  .grid-editar-plato {
+    display: block;
+    gap: 1.5rem;                   /* espacio entre columnas */
+    align-items: center;             
+    margin-top: 1rem;            
+    font-size: 0.95em;
+  }
+
+
+  .grid-ingredientes {
+    grid-template-columns: 1.5fr 1.2fr 0.8fr 0.5fr; /* todas las columnas visibles */
+    font-size: 0.7em;
+  }
+
+  .grid-ingredientes > div {
+    padding: 0.5rem; /* reduce el espacio interno */
+  }
+}
+
+@media (max-width: 320px) {
+  .header-ingredientes{
+    font-size: 0.6rem;
+  }
+}
+
+.card.pagina-edicion-plato  {
+  width: auto; /* o podés poner otra medida que quieras */
+}
+
+.atributtes-ingpla {
+	width: 100%;
+  display: flex;
+	border-bottom: 1px solid var(--color-sombra);
+  height: 3em;
+}
+
+.tacho-edicionPlato{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ingrediente-section-edicionPlato{
+  border: 1px solid var(--color-sombra);
+    display: flex;
+  border-radius: 15px;
+}

@@ -1,0 +1,24 @@
+.main-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background-gris);
+}
+
+.container-full-vh {
+  height: 100vh;
+}
+
+.container-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* @media (max-width: 430px) {
+  .main-container {
+    padding-bottom: 70px;
+  }
+} */

@@ -1,0 +1,38 @@
+nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border-top: 0.5px solid #bbb;
+  padding: 0.5rem 1rem;
+  background-color: var(--color-primary);
+}
+.nav {
+  display: flex;
+  gap: 8px;
+}
+
+.nav-bar-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--user-name-brown);
+  flex: 1;
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: 500;
+  gap: 4px;
+  padding: 4px 0;
+}
+
+.nav-bar-link img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  color: var(--user-name-brown);
+}
+
+.nav-bar-link.active {
+  color: var(--color-primario-sombra);
+  font-weight: 700;
+}

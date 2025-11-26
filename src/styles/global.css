@@ -1,0 +1,58 @@
+:root {
+	--color-primario: #e82933;
+	--color-primario-sombra: #b71f27;
+	--color-secundario: #fff;
+	--color-secundario-sombra: #e0e0e0;
+	--color-sombra: rgb(173, 173, 173);
+	--background-gris: rgb(240, 240, 240);
+	--color-verde: rgb(20, 158, 43);
+	--user-name-brown: #8b6969;
+	--color-secundario-pedidos: #967b7b73;
+	--color-terciario-pedidos: #6d525225;
+	--rem-size: 10px;
+	--main-font: "roboto";
+  	--color-verde-sombra: #117821;
+		--color-entregado: green;
+		--color-pendiente: rgba(255, 128, 0, 0.719);
+		--color-cancelado: #e82933;
+		--color-preparado: rgb(0, 162, 255);
+	--color-copado-jorge: rgb(255, 86, 86);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	height: 100vh;
+	font-family: var(--main-font);
+	background-color: var(--background-gris);
+}
+
+.section-container {
+	box-shadow: 0 0 0.75em var(--color-sombra);
+	padding: 1.5rem 1rem;
+}
+
+.section-title {
+	font-size: 1.75em;
+}
+
+.input-text {
+	padding-left: 0.5em;
+	box-sizing: border-box;
+	border: 1px solid var(--color-sombra);
+	border-radius: 2px;
+	height: 2em;
+}
+
+.input-text:hover {
+	border: 1px solid grey;
+}
+
+.input-text:focus {
+	outline: none;
+	border: 1.5px solid rgb(93, 93, 93);
+}

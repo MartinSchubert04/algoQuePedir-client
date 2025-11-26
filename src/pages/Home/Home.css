@@ -1,0 +1,35 @@
+.busqueda-body {
+  background-color: var(--color-primary);
+  width: 100vw;
+  padding-bottom: var(--nav-space);
+
+}
+
+.result-title {
+  margin: 0.3rem 1rem;
+  justify-self: start;
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+.text-not-found {
+  margin: 2rem;
+  justify-self: center;
+  font-weight: 600;
+  color: var(--color-text-error);
+  font-style: italic;
+}
+
+.loading-wheel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10rem;
+  color: var(--color-shadow);
+}
+
+.home-logout-container {
+  position: absolute;
+  top: 0.8rem;
+  right: 1rem;
+  z-index: 10;
+}

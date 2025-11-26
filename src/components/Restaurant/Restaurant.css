@@ -1,0 +1,40 @@
+.restaurant-container{
+    display: flex;
+    gap: 1em;
+    align-items: center;
+}
+.img-container{
+    width: 5rem;
+    height: 5rem;
+}
+.img-container > img{
+  width: 80px;
+  height: 80px;
+  border-radius: 12px;
+  object-fit: cover;
+  margin-right: 1.2rem;
+}
+.restaurant-data{
+    display: flex;
+    flex-direction: column;
+    gap: .3em;
+}
+
+.pedido-detalle {
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.pedido-icono {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.pedido-icono svg {
+  width: 22px;
+  height: 22px;
+}

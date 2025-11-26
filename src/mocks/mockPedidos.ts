@@ -1,0 +1,56 @@
+import type { PedidoDTO } from "../domain/Pedido"
+
+export const mockPedidos: PedidoDTO[] = [
+  {
+    id: 1,
+    estado: "PENDIENTE",
+    nombreLocal: "Pizzería Don Pepe",
+    valoracion: 4.6,
+    distanciaALocal: 10.3,
+    fecha: "12 de Septiembre",
+    fotoLocal: "https://picsum.photos/100/100?random=1",
+    items: 3,
+    total: 5200,
+    metodoPago: "EFECTIVO",
+    platos: [
+      { id: 1, nombrePlato: "Pizza Muzarella", cantidad: 1, costo: 2500, imagenPlato: "https://picsum.photos/80/80?pizza" },
+      { id: 2, nombrePlato: "Fainá", cantidad: 1, costo: 400, imagenPlato: "https://picsum.photos/80/80?faina" },
+    ],
+    costeEnvio: 800,
+    adicionalPorMedio: 0,
+  },
+  {
+    id: 2,
+    estado: "ENTREGADO",
+    nombreLocal: "Sushi Go!",
+    valoracion: 4.9,
+    distanciaALocal: 1.2,
+    fecha: "2025-11-10",
+    fotoLocal: "https://picsum.photos/100/100?random=2",
+    items: 5,
+    total: 8500,
+    metodoPago: "QR",
+    platos: [
+      { id: 1, nombrePlato: "Combo 12 piezas", cantidad: 1, costo: 7000, imagenPlato: "https://picsum.photos/80/80?sushi" },
+    ],
+    costeEnvio: 600,
+    adicionalPorMedio: 200,
+  },
+  {
+    id: 3,
+    estado: "CANCELADO",
+    nombreLocal: "La Hamburguesería",
+    valoracion: 4.2,
+    distanciaALocal: 3.8,
+    fecha: "2025-11-08",
+    fotoLocal: "https://picsum.photos/100/100?random=3",
+    items: 2,
+    total: 4000,
+    metodoPago: "TRANSFERENCIA",
+    platos: [
+      { id: 1, nombrePlato: "Hamburguesa Doble", cantidad: 1, costo: 3500, imagenPlato: "https://picsum.photos/80/80?burger" },
+    ],
+    costeEnvio: 500,
+    adicionalPorMedio: 0,
+  },
+]

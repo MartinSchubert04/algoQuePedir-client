@@ -1,0 +1,191 @@
+.main-card-title {
+    display: flex;
+    justify-content: center;
+	font-weight: bold;
+	font-size: 1.8rem;
+    padding: 2rem;
+    padding-top: 2rem;
+    background-color: var(--color-copado-jorge);
+    color:white;
+    border-radius: 0 0 5px 5px;
+}
+
+.rating-content{
+   padding-top: 3rem;
+   padding-bottom: 3rem;
+    font-size: 0.8rem;
+}
+.rating-page-container{
+    padding-top: 1rem;
+    font-size: 0.8rem;
+
+}
+/* --- Estilos para StarRating --- */
+
+.star-rating-container {
+    display: flex;
+    margin-bottom: 30px;
+    gap: 10px; /* Espacio entre las estrellas */
+    /* Alinea las estrellas a la izquierda como en la imagen */
+    justify-content: flex-start; 
+}
+
+.star-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column; /* Para poner el número debajo */
+    align-items: center;
+    padding: 0;
+}
+
+.star-icon {
+    font-size: 32px; /* Estrella grande */
+    /* Asegura que el color se aplique solo al icono */
+    line-height: 1; 
+}
+
+.star-label {
+    font-size: 14px;
+    color: #555; /* Color gris para el número */
+    margin-top: 5px;
+}
+
+/* Estado de la estrella: Vacía */
+.star-icon.empty {
+    color: #ccc; /* Gris claro para estrella vacía */
+}
+
+/* Estado de la estrella: Llena */
+.star-icon.filled {
+    color: #FFD700; /* Dorado para estrella llena */
+}
+
+
+.fixed-submit-button {
+  position: fixed;
+  bottom: 100px;       /* altura del navbar (ajustá según tu app) */
+  background-color: #a51c27; 
+  padding: 1rem 0;
+  width: 82%;       
+  max-width: 400px; 
+  font-size: 18px;
+  text-align: center;
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+  z-index: 999; /* para que quede encima del navbar */
+}
+
+.back-button-checkout{
+    position: absolute;
+    left: 0;
+    border: none;
+    background-color: #e0f0f7;
+    color: #0d3b66;
+    border-radius: 0.5em;
+    padding: 0.5em;
+}
+.back-button-checkout:hover{
+    background-color: #cce4f0;
+}
+.pedido-title-button > h2{
+    text-align: center;
+    width: 100%;
+    font-size: 1.5em;
+}
+
+
+.checkout-container{
+    width: 100vw;
+    height: 100%;
+    padding: 2em;
+}
+
+.pedido-title-button{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 3em;
+}
+.back-button-checkout{
+    position: absolute;
+    left: 0;
+    border: none;
+    background-color: #e0f0f7;
+    color: #0d3b66;
+    border-radius: 0.5em;
+    padding: 0.5em;
+}
+.back-button-checkout:hover{
+    background-color: #cce4f0;
+}
+.pedido-title-button > h2{
+    text-align: center;
+    width: 100%;
+    font-size: 1.5em;
+}
+
+.restaurant-container{
+    margin: 1em 0;
+}
+
+.article-container{
+    margin-top: 2em;
+}
+
+/* Centrar horizontalmente */
+.custom-rating {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 3rem;
+  gap: 1rem; /* espacio entre estrellas */
+  font-size: 3rem; /* agranda las estrellas */
+}
+
+/* Aumentar el tamaño de los íconos SVG */
+.custom-rating .p-rating-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+/* Cambiar el color de las estrellas si querés */
+.custom-rating .p-rating-icon {
+  color: gold;
+}
+
+/* Cambiar el color al pasar el mouse */
+.custom-rating .p-rating-item:hover .p-rating-icon {
+  color: orange;
+}
+
+/* Estilos extra para el botón */
+.card-menu-precio.secundary-button {
+  background: linear-gradient(135deg, #e01717e8, #e01717e8);
+  color: #fff;
+  border: none;
+  padding: 0.5em 1.2em;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 8px rgba(255, 79, 79, 0.3);
+  margin-top: 1em;
+}
+
+/* Hover: levanta y cambia el gradiente */
+.card-menu-precio.secundary-button:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #ff9292, #ff5f5f);
+  box-shadow: 0 6px 12px rgba(255, 79, 79, 0.4);
+}
+
+/* Active: efecto de click */
+.card-menu-precio.secundary-button:active {
+  transform: scale(0.96);
+  box-shadow: 0 2px 4px rgba(255, 79, 79, 0.2);
+}

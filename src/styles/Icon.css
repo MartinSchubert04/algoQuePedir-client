@@ -1,0 +1,102 @@
+.icon-action {
+  height: 30px;
+  font-size: 1.75em;
+}
+
+.can-checkbox{
+  display: none;
+}
+
+.icon-line {
+  width: 12px;
+}
+
+/* 
+
+TACHO DE BASURA
+
+*/
+
+/* Trash can animation */
+.can-container {
+  position: relative;
+  display: table;
+}
+
+.can-container,
+.can-container * {
+  user-select: none;
+}
+
+.can-container label {
+  display: inline-block;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none; /* Safari iOS */
+  -ms-user-select: none; /* Edge antiguo */
+  -webkit-tap-highlight-color: transparent; /* quita el recuadro celeste al tocar */
+}
+
+.wrapper {
+  position: relative;
+  cursor: pointer;
+}
+
+.lid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 0px;
+  width: 24px;
+  height: 5px;
+  border-radius: 2px;
+  background: var(--color-primario);
+  border: solid 2px var(--color-primario);
+  transition: all 0.2s ease-in-out;
+  transform-origin: left;
+  transform: rotate(0deg) translateY(0px);
+}
+
+.lid:before,
+.lid:after {
+  content: "";
+  position: absolute;
+}
+
+.lid:before {
+  width: 10px;
+  height: 3px;
+  top: -4px;
+  left: 5px;
+  background: var(--color-primario);
+  border-radius: 2px;
+}
+
+.can {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  left: 2px;
+  width: 20px;
+  height: 20px;
+  background: var(--color-primario);
+  border: solid 2px var(--color-primario);
+  border-top: none;
+  border-radius: 0 0 4px 4px;
+}
+
+.can-filler {
+  position: relative;
+  top: -1px;
+  width: 14px;
+  height: 17px;
+  background: var(--color-secundario);
+  border-radius: 0 0 2px 2px;
+}
+
+
+.wrapper:active .lid {
+  transform: rotate(-30deg) translateY(-2px);
+}

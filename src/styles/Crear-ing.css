@@ -1,0 +1,26 @@
+.crear-ing-input{
+  width: 55%;
+}
+.crear-ing-input > .input-container{
+  width: 100%;
+}
+.crear-ing-input > .input-container > input{
+  height: 3em;
+}
+
+.crear-ing-container-inputs{
+  justify-content: space-between;
+}
+
+.main-card-ing-form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+@media (max-width: 430px){
+  .crear-ing-input{
+    width: 90%;
+  }
+}

@@ -1,0 +1,46 @@
+.plato-card-container {
+  height: 100%;
+  width: 100%;
+  padding: 0.5rem 0;
+}
+
+.plato-content-container {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.6rem;
+}
+.plato-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 0.8rem;
+}
+.plato-img {
+  height: 100%;
+  width: 8rem;
+  border-radius: 10px;
+  object-fit: cover; /* mantiene proporciones y recorta a los lados */
+  object-position: center; /* centra la imagen horizontalmente */
+}
+
+.plato-name {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.plato-description {
+  padding-right: 8px;
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: var(--color-text-red-bright);
+}
+
+.plato-cost {
+  border-radius: 5px;
+  background-color: var(--color-surface);
+  padding: 0.3rem 0.8rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+}

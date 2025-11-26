@@ -1,0 +1,51 @@
+.mensaje-card-container {
+  min-height: 5rem;
+  width: 100%;
+  padding: 0.5rem 0;
+}
+.mensaje-header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.mensaje-content-container {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.6rem;
+}
+.mensaje-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 0.5rem;
+}
+.mensaje-img {
+  height: 100%;
+  width: 8rem;
+  border-radius: 10px;
+  object-fit: cover; /* mantiene proporciones y recorta a los lados */
+  object-position: center; /* centra la imagen horizontalmente */
+}
+
+.mensaje-name {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.mensaje-description {
+  padding: 8px 0;
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: var(--color-text-red-bright);
+}
+
+.mensaje-cost {
+  border-radius: 5px;
+  background-color: var(--color-surface);
+  padding: 0.3rem 0.8rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+}

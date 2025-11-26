@@ -1,0 +1,12 @@
+.local-grid {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: repeat(2, minmax(150px, 1fr));
+  gap: 2rem 1rem;
+  justify-content: start;
+  padding: 1rem;
+  width: 100vw;
+  margin: 0 auto;
+  background-color: var(--color-primary);
+}

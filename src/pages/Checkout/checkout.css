@@ -1,0 +1,101 @@
+body{
+    background-color: var(--color-primary);
+}
+
+.checkout-container-pedido{
+    margin-top: 2em;
+    width: 100vw;
+    padding-bottom: 5em;
+}
+.page-content-wrapper{
+    padding: 2em;
+}
+
+.pedido-title-button-pedido{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.back-button-checkout{
+    position: absolute;
+    left: 0;
+    border: none;
+    background-color: #e0f0f7;
+    color: #0d3b66;
+    border-radius: 0.5em;
+    padding: 0.5em;
+}
+.back-button-checkout:hover{
+    background-color: #cce4f0;
+}
+.pedido-title-button > h2{
+    text-align: center;
+    width: 100%;
+    font-size: 1.5em;
+}
+
+.restaurant-container{
+    margin: 1em 0;
+}
+
+.article-container{
+    margin-top: 2em;
+}
+.pedido-container{
+    margin-bottom: 2em;
+    width: 100%;
+}
+
+.checkout-divider{
+    width: 100%;
+    border: .5px solid black;
+    margin: 1em 0;
+}
+
+.submit-buttons-container{
+    margin-top: 2em;
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    flex-direction: column;
+    gap: 1em;
+}
+.confirm-button{
+    height: 2.5rem;
+    border: none;
+    background-color: var(--color-primario);
+    color: white;
+    padding: .5em;
+    border-radius: .5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.clean-order{
+    height: 2.5rem;
+    border: 1px solid rgb(255, 86, 86);
+    background-color: white;
+    color: rgb(255, 86, 86);
+    padding: .5em;
+    border-radius: .5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.clean-order > *{
+    text-decoration: none;
+    color: rgb(255, 86, 86);
+}
+
+.confirm-button.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.confirm-button.disabled:hover {
+    background-color: rgb(255, 86, 86);
+}

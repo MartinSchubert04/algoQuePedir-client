@@ -1,0 +1,89 @@
+:root {
+  /* Colores primarios */
+  --color-primary: #fbfcfa;
+  --color-primary-light: #42a5f5;
+  --color-primary-dark: #e0e0e07e;
+
+  --nav-space: 4.25rem;
+  --header-space: 3rem;
+
+  --color-text-red: #c83333;
+  --color-text-red-bright: #c54343f5;
+
+  /* Colores secundarios */
+  --color-secondary: #cae9ff;
+  --color-secondary-light: #cae9ff;
+  --color-secondary-dark: #cae9ff;
+
+  /* Fondos y superficies */
+  --color-background: #ffffff;
+  --color-surface: #dddddd;
+  --color-surface-variant: #e0e0e0;
+
+  /* Textos */
+  --color-text-primary: black;
+  --color-text-secondary: rgba(31, 31, 31, 0.705);
+  --color-text-disabled: #bdbdbd;
+
+  /* Textos para botones */
+  --color-text-button-primary: white;
+  --color-text-button-secondary: black;
+  --color-text-button-disabled: #bdbdbd;
+
+  /* Estados especiales */
+  --background-color-error: #5fa8d3;
+  --background-color-success: #cae9ff;
+  --background-color-warning: #62b6cb;
+
+  --color-text-error: rgb(228, 8, 8);
+  --color-text-success: rgb(61, 163, 40);
+  --color-text-warning: rgba(241, 223, 52, 0.884);
+
+  /* Sombras y bordes (opcional, pero útil para paleta completa) */
+  --color-shadow: rgba(0, 0, 0, 0.267);
+  --color-border: #d1d5db;
+}
+
+.MuiTableContainer-root {
+  width: 100vw !important;
+}
+
+body {
+  background-color: var(--color-primary);
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}

@@ -1,0 +1,246 @@
+#detalle-pedido-container{
+  .pedido{
+    display: flex;
+    gap: 1rem;
+    padding: 0.5em;
+    margin: 1.3rem 0rem 1.3rem 0;
+  }
+  .numeroPedido{
+      font-size: clamp(1.5rem, 2vw, 1.8rem);
+      flex: 50%;
+  }
+  .estadoHeader{
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      flex: 50%;
+  }
+
+  .estadoPedido{
+      white-space: nowrap;
+      font-size: clamp(1rem, 1.5vw, 1.3rem);
+  }
+  .badgePedido{
+      display: flex;
+      justify-content: center;
+      flex: 1;
+      font-size: clamp(0.9rem, 1.2vw, 1.2rem);
+      padding: 0.2em 0.5em;
+      color: #ffffff;
+      border-radius: 999px;
+  }
+  /* ---------------------------------- */
+  .card {
+    padding: 2em 1.6em;
+    width: clamp(340px, 77vw, 77vw);
+    text-align: left;
+    flex-direction: row;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    align-items: flex-start;
+    height: auto;
+  }
+  .datos-container{
+      width: 50%;
+  }
+  .titulo-header{
+      font-size: clamp(1rem, 1.3vw, 1.3rem);
+  }
+  .datos-header{  
+      display: flex;
+      padding: 0.5em 0;
+      
+  }
+  .datos-header img {
+      border-radius: 50%;
+      width: 4em;
+      height: 4em;
+      object-fit: cover;
+  }
+  .descripcion{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-left: 0.6em;
+  }
+  .texto_principal{
+      font-size: clamp(0.95rem, 1vw, 1.1rem);
+      font-weight: bold;
+      padding-bottom: .15em;
+  }
+  .texto_secundario{
+      color: var(--user-name-brown);
+      font-size: clamp(0.8rem, 0.9vw, 1rem);
+  }
+
+  .map-icon-container {
+      width: 4em;
+      height: 4em;
+  }
+
+  .map-icon-container > i {
+      font-size: 2.5em;
+  }
+  dl {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3em;
+  }
+  /* --------------------------------- */
+  .resumen{
+      flex-direction: column;
+  }
+  .resumen-atributtes{
+      width: 100%;
+      border-bottom: 1px solid var(--color-sombra); 
+      display: flex;
+      align-items: center;
+      padding: 1.3em 0em 1.3em 1em;
+  }
+  .card-table-detalle-pedido {
+    width: 100%;
+    border: 1px solid var(--color-sombra);
+    border-radius: 6px;
+  }
+
+  td.descripcion-header {
+      display: flex;
+  }
+  .card-table-detalle-pedido-detalle-pedido th.plato,   
+  .card-table-detalle-pedido td.descripcion-header {
+      width: 60%;
+  }
+
+  .card-table-detalle-pedido th.cantidad,
+  .card-table-detalle-pedido td.table-item-name {
+      width: 20%;
+      justify-content: center;
+  }
+
+  .card-table-detalle-pedido th.precio,
+  .card-table-detalle-pedido td.table-item-cost {
+      width: 20%;
+      justify-content: center;
+  }
+
+  .resumen-plato:last-child {
+    border-bottom: none;
+  }
+
+  .table-item-name,
+  .table-item-cost,
+  .table-action-items{
+      font-size: clamp(0.7rem, 1vw, 1.1rem);
+      width: 60%;
+  }
+  .img-plato{
+      border-radius: .5em;
+      width: 3em;
+      height: 3em;
+      object-fit: cover;
+  }
+  .texto-tabla {
+    font-size: clamp(0.75em, 1vw, 1.1rem);
+    width: 100%;
+  }
+  /* ------------------------------ */
+  .pago {
+      flex-direction: column;
+  }
+  .lista-pago{
+      width: 100%;
+      gap: 1rem;
+  }
+  .filaPago {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      margin-top: 1em;
+  }
+  .item-pago{
+      font-size: clamp(0.8rem, 0.9vw, 1rem);
+  }
+  .total {
+      border-top: 1px solid var(--color-sombra);
+      padding: 1em 0em;
+      margin-top: 0em;
+      border-bottom: 1px solid var(--color-sombra);
+      font-size: clamp(1rem, 1.3vw, 1.3rem);
+  }
+  .metodoPago{
+      display: flex;
+      align-items: center;
+  }
+  .metodoPago > i {
+      font-size: 2.5rem;
+      padding-right: 0.6rem;
+  }
+  .button-container{
+      width: clamp(355px, 77vw, 77vw);
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: .5em;
+  }
+
+  .ubicacion-container{
+    gap:0;
+    padding:.5em 0;
+  }
+
+  @media (max-width: 541px) {
+      .pedido{
+      flex-wrap: wrap;
+      margin: 1.5rem;
+      }
+      .card {
+          flex-direction: column;
+          display: flex;
+          margin: 0 auto 1em auto;
+      }
+      .datos-container {
+          width: 100%;
+      }
+      .resumen td.descripcion-header img {
+          display: none;
+    }
+
+    .resumen td.descripcion-header .descripcion p.texto_secundario {
+          display: none;
+          width: 100%;
+    }
+    .producto{
+          padding-left: 0em;
+    }
+    .resumen-atributtes{
+          padding: 1em;
+    }
+  }
+
+    @media (min-width: 200px) AND (max-width: 343px){
+      .pedido{
+      flex-wrap: wrap;
+      }
+      .card {
+          flex-direction: column;
+          display: flex;
+          margin: 0 auto 1em 1.5em;
+      }
+      .datos-container {
+          width: 100%;
+      }
+      .resumen td.descripcion-header img {
+          display: none;
+    }
+
+    .resumen td.descripcion-header .descripcion p.texto_secundario {
+          display: none;
+          width: 100%;
+    }
+    .producto{
+          padding-left: 0em;
+    }
+    .resumen-atributtes{
+          padding: 1em;
+    }
+  }
+}

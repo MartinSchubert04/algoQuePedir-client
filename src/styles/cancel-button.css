@@ -1,0 +1,29 @@
+.cancel-button {
+    background-color: #f8d7da;
+    border: none;
+    border-radius: 1em;
+    padding: .8em;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 3.5em;
+    min-height: 3.5em;
+    touch-action: manipulation;
+}
+
+.cancel-button:hover {
+    background-color: #f1b0b7;
+    transform: scale(1.05);
+}
+
+.cancel-button:active {
+    transform: scale(0.95);
+}
+
+.cancel-button svg {
+    color: #721c24;
+    height: 2em;
+    width: 2em;
+}

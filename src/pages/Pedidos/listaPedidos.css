@@ -1,0 +1,73 @@
+/* html,
+body {
+  padding-bottom: 3rem; 
+} */
+
+.lista-pedidos-lista {
+  padding-bottom: 4em;
+}
+
+.lista-pedidos-header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0 0 5px 5px;
+
+  width: 100%;
+  padding: 1em 0;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+  color: white;
+
+  background-color: var(--color-copado-jorge);
+}
+
+.lista-pedidos-filtro {
+  display: flex;
+  gap: 1.5em;
+  margin: 1em 0;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.lista-pedidos-filtro button {
+  all: unset;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5em;
+  font-size: 1em;
+  color: var(--color-copado-jorge);
+  transition: all 0.2s ease;
+}
+
+.lista-pedidos-filtro button:hover:not(.activo) {
+  text-shadow: #000 0 0 0.4px;
+}
+
+.lista-pedidos-filtro button.activo {
+  font-weight: bold;
+}
+
+.filtro-texto-sombra {
+  background-color: var(--color-copado-jorge);
+  height: 0.35em;
+  border-radius: 1em 1em 0 0;
+  opacity: 0.3;
+  width: 100%;
+  transition: opacity 0.3s ease;
+}
+
+.lista-pedidos-filtro button.activo .filtro-texto-sombra {
+  opacity: 1;
+}
+
+.pedido-item {
+  background-color: #fafafa;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+}

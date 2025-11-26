@@ -1,0 +1,32 @@
+.page-header {
+  width: 100vw;
+  position: fixed;
+  z-index: 1000;
+  background-color: var(--color-primary);
+  height: 3rem;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.page-header-title {
+  font-weight: 500;
+  font-size: 1.2rem;
+  height: 1.8rem;
+  display: flex;
+  justify-self: center;
+  align-items: center;
+}
+
+.arrow-icon-container {
+  border: none;
+  background-color: var(--color-primary);
+  position: absolute;
+  left: 10px;
+}
+
+.arrow-icon {
+  height: 1.8rem;
+}

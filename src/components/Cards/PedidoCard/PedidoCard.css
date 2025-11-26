@@ -1,0 +1,88 @@
+.pedido-card {
+  display: flex;
+  align-items: center;
+  background: var(--color-secundario-pedidos);
+  border-radius: 16px;
+  padding: .5rem .5rem;
+  box-shadow: 0px 0px 2px 2px var(--user-name-brown);
+  transition: all 0.2s ease;
+  cursor: pointer;
+  margin: 1.5em .5em;
+  min-height: 120px;
+}
+
+.pedido-foto {
+  width: 80px;
+  height: 80px;
+  border-radius: 12px;
+  object-fit: cover;
+  margin-right: 1.2rem;
+}
+
+.pedido-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.pedido-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pedido-nombre {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+.pedido-detalle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #666;
+  font-size: 0.85rem;
+  margin-top: .2rem;
+}
+
+.pedido-icono {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.pedido-icono svg {
+  width: 22px;
+  height: 22px;
+}
+
+.pedido-cancelar-btn {
+  all: unset;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #cf2436d0; 
+  cursor: pointer;
+  transition: transform 0.2s, color 0.2s;
+}
+
+.pedido-footer {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+  margin-top: 0.4rem;
+}
+
+.pedido-total {
+  font-weight: 600;
+  color: #333;
+}
+
+.pedido-items {
+  font-size: 1.02em;
+  color: #777;
+}

@@ -1,0 +1,163 @@
+.main-content-container {
+  width: 100%;
+  padding-bottom: 1.5em;
+  padding-top: 1.65em;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+}
+
+/* .main-card-title {
+  width: 75vw;
+  min-width: 300px;
+}
+ */
+.card-local {
+  padding: 2em;
+  height: auto;
+  width: 75vw;
+  min-width: 340px;
+  margin: 0.5rem;
+  max-height: 30rem;
+}
+
+.card-row {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 1em;
+  min-width: 340px;
+}
+
+.input-form-local {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 60%;
+  min-width: 290px;
+  height: clamp(10rem, 15vh, 15rem);
+  justify-content: space-between;
+}
+
+
+
+
+.image-wrapper {
+  display: flex;
+  align-items: center;
+  flex: 1 1 40%;
+  height: 400px;
+  width: 300px;
+}
+
+
+.imagen-local {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  max-height: 400px;
+  font-size: 0;
+}
+
+.card-title {
+  width: 100%;
+  font-size: 1.35em;
+  text-align: left;
+  margin: 0.5rem;
+}
+
+
+
+.direccion-input-container {
+  display: grid;
+  grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+  gap: 1em;
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+.porcentajes-input-container {
+  width: 100%;
+  display: flex;
+  gap: 1em;
+}
+
+.pago-checkbox-container {
+  width: 100%;
+  margin-top: 1em;
+  display: flex;
+  gap: 2em;
+}
+
+.pago-checkbox-item {
+  display: flex;
+  gap: .5em;
+  align-items: center;
+}
+
+.pago-checkbox-item>input {
+  width: 2em;
+  height: 2em;
+  background: white;
+  border-radius: 5px;
+  border: 2px solid #555;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1em;
+  width: 70vw;
+  height: 2.5em;
+  margin: 1rem;
+}
+
+/* Mobile */
+@media (max-width: 425px) {
+  .buttons-container {
+    margin: 10px;
+    width: 336px;
+    justify-content: center;
+  }
+
+  .main-content-container *:not(.pago-checkbox-item, .buttons-container) {
+    flex-direction: column;
+  }
+
+  .main-content-container {
+    font-size: .8em;
+  }
+
+  .card-row {
+    align-items: center;
+  }
+
+  main {
+    padding-bottom: 2em;
+  }
+
+  .direccion-input-container {
+    display: flex;
+    width: 100%;
+  }
+}
+
+/* Tablet */
+@media (min-width: 426px) and (max-width: 768px) {
+  .buttons-container {
+    height: auto;
+  }
+
+  .main-content-container {
+    font-size: .8em;
+  }
+
+  .card-local {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+  }
+}

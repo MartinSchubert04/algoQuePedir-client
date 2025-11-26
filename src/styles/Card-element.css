@@ -1,0 +1,91 @@
+.atributtes {
+	width: 100%;
+	border-bottom: 1px solid var(--color-sombra);
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	padding: 1.3em 1.3em;
+	box-sizing: border-box;
+}
+
+.card-table-body .atributtes:last-child {
+	border-bottom: none;
+}
+
+.card-table-head {
+	border-bottom: 1px solid var(--color-sombra);
+	width: 100%;
+}
+.card-table-body {
+	width: 100%;
+}
+.table-item-name {
+	display: flex;
+	justify-content: start;
+}
+
+.table-item-name {
+	width: 3.5rem;
+	display: flex;
+	justify-content: start;
+}
+.table-item-cost {
+	display: flex;
+	justify-content: end;
+	width: 3rem;
+}
+.table-item-group{
+	width: 9rem;
+	display: flex;
+	justify-content: start;
+}
+
+.table-action-items {
+	width: 4.5rem;
+	display: flex;
+	justify-content: center;
+}
+
+@media (max-width: 430px) {
+	.atributtes td:nth-last-child(2), /* anteúltimo */
+    .atributtes td:nth-last-child(3),
+    .atributtes th:nth-last-child(2), /* anteúltimo */
+    .atributtes th:nth-last-child(3)   /* el anterior al anteúltimo */ {
+		display: none;
+	}
+
+	.atributtes {
+		padding: 1.3em 0.8em;
+	}
+
+	.hidden-item {
+		display: block;
+	}
+
+	.table-action-items {
+		width: 7.5rem;
+		justify-content: center;
+	}
+}
+
+/* Tabla de ingredientes en edicion plato */
+.table-item-ingrediente {
+  display: table-cell;
+  text-align: center;
+}
+.th-edicionPlato{
+  display: table-cell;
+  text-align: center;
+  width: 25%;
+	padding-top: 1rem;
+}
+
+.table-edicionPlato{
+  width: 100%;
+  table-layout: fixed;
+  height: auto;
+  border-radius: 15px;
+  border-collapse: collapse;
+  box-sizing: border-box;
+  overflow: hidden;
+}

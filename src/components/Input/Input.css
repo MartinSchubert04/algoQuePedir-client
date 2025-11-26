@@ -1,0 +1,162 @@
+.input-form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.input-container {
+	text-align: left;
+	position: relative;
+	width: clamp(16.25rem, 20vw, 25rem); /* 260px → 16.25rem, 400px → 25rem */
+	margin: 0.3125rem; /* 5px → 0.3125rem */
+}
+
+
+.input-label {
+	position: absolute;
+	left: 0.625rem; /* 10px → 0.625rem */
+	top: 38%;
+	transform: translateY(-50%);
+	font-size: 0.9rem;
+	color: var(--color-sombra);
+	background: var(--color-secundario);
+	padding: 0 0.25em;
+	pointer-events: none;
+	transition: all 0.3s ease;
+	font-weight: 600;
+}
+.input-label-pedido {
+  font-size: 1em;
+}
+
+.big-input-label {
+	top: 42%;
+}
+
+.input {
+	display: flex;
+	align-items: center;
+	border: 1px solid var(--color-sombra);
+	border-radius: 0.25rem; /* 4px → 0.25rem */
+	height: 1.875rem; /* 30px → 1.875rem */
+	width: 100%;
+	padding: 0 0.75rem; /* 12px → 0.75rem */
+	background: var(--color-secundario);
+	outline: none;
+	font-size: 0.8rem;
+	margin-bottom: 0.625rem; /* 10px → 0.625rem */
+	font-weight: 550;
+}
+
+
+.input-local {
+  height: 3em;
+}
+
+.input-container-local {
+  width: 100%;
+  margin: 0;
+}
+
+
+
+.input:hover{
+	border: 0.125rem solid var(--color-sombra);
+}
+
+.input:focus {
+	border: 0.125rem solid #1976d2;
+}
+
+.input.input-error {
+  border-color: var(--color-primario);
+}
+
+.input:focus + .input-label,
+.input:not(:placeholder-shown) + .input-label {
+	top: 0;
+	transform: translateY(-50%);
+	font-size: 0.7rem;
+	color: var(--color-sombra);
+	background: var(--color-secundario);
+	padding: 0 0.3125rem; /* 5px → 0.3125rem */
+}
+
+
+.input-container input[type="password"],
+.input-container input[type="text"] {
+  padding-right: 2.0625rem; 
+}
+
+.icon:hover {
+	cursor: pointer;
+}
+
+
+.input-container .input-icon-eye {
+	height: 1.0625rem; /* 17px → 1.0625rem */
+	position: absolute;
+	right: -0.7rem;
+	top: 1%;
+	transform: translate(
+		-1.75rem,
+		0.375rem
+	); /* -28px → -1.75rem, 6px → 0.375rem */
+}
+
+.input-icon-eye:hover {
+	cursor: pointer;
+}
+
+.input-icon-warning {
+	color: var(--color-primario);
+	height: 1.0625rem; /* 17px → 1.0625rem */
+	position: absolute;
+	transform: translateY(-0.125rem); /* -2px → -0.125rem */
+}
+
+.input.confirm-pass {
+	border-color: var(--color-primario);
+}
+
+.card-message.input-alert {
+	margin-top: 0;
+	color: var(--color-primario);
+	font-size: 0.7rem;
+	margin-left: 1.5625rem; /* 25px → 1.5625rem */
+	margin-bottom: 8px;
+}
+
+.container-inputs {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 4em;
+	height: 80%;
+	width: 100%;
+}
+
+.big-input-container {
+	margin: 4em;
+	width: clamp(18.75rem, 60vw, 80vw); /* 300px → 18.75rem */
+}
+
+.big-input {
+	height: clamp(3.125rem, 4em, 4em); /* 50px → 3.125rem */
+	width: clamp(18.75rem, 40vw, 80vw); /* 300px → 18.75rem */
+}
+
+/* esto para q deje de mostrar el icono q te sale por default al escribir una contraseña en el navegador */
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear {
+  display: none;
+}
+
+input[type="password"]::-webkit-credentials-auto-fill-button,
+input[type="password"]::-webkit-clear-button,
+input[type="password"]::-webkit-password-toggle-button {
+  display: none;
+  appearance: none;
+}

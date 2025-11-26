@@ -1,0 +1,17 @@
+.add-button-container{
+    margin-top: 1em;
+    width: 100%;
+    display: flex;
+    justify-content: right;
+}
+.add-button-container > button{
+    border: none;
+    background-color: rgb(255, 86, 86);
+    color: white;
+    padding: .5em;
+    border-radius: .5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}

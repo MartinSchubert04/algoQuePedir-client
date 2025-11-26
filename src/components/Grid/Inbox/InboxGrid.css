@@ -1,0 +1,13 @@
+.inbox-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 100%);
+  grid-auto-rows: auto;
+  justify-content: start;
+  padding: 1rem;
+  margin: 0 auto;
+  background-color: var(--color-primary);
+}
+
+.inbox-grid .mensaje-card-container:not(:last-child) {
+  border-bottom: 1px solid var(--color-border);
+}

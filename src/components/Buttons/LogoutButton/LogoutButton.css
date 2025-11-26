@@ -1,0 +1,18 @@
+.logout-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logout-btn:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.logout-btn img {
+  width: 18px;
+  height: 18px;
+}

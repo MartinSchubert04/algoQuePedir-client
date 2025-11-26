@@ -1,0 +1,68 @@
+button {
+  padding: 0.5em 1.5em;
+  border-radius: 1rem;
+}
+
+.primary-button {
+  background-color: var(--color-primario);
+  border: none;
+  color: var(--color-secundario);
+}
+
+.primary-button:hover {
+  cursor: pointer;
+  box-shadow: 0 0 0.25em var(--color-sombra);
+}
+
+.primary-button:active {
+  background-color: var(--color-primario-sombra);
+}
+
+.secondary-button {
+  background-color: var(--color-secundario);
+  border: 1px solid var(--color-primario);
+  color: var(--color-primario);
+}
+
+.secondary-button:hover {
+  cursor: pointer;
+  box-shadow: 0 0 0.25em var(--color-sombra);
+}
+
+.secondary-button:active {
+  background-color: var(--color-secundario-sombra);
+}
+
+.mobile-add-button{
+  display: none;
+}
+
+@media (max-width: 425px) {
+  .desktop-add-button {
+    display: none;
+  }
+
+  .mobile-add-button {
+    display: inline-block;
+    z-index: 10;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 100%;
+    position: fixed;
+    bottom: 12.5%;
+    right: 5%;
+    box-shadow: 0 0 5px black;
+  }
+  .add-button-icon {
+    background-color: white;
+    -webkit-mask: url(../iconos/plus.svg) no-repeat center;
+    mask: url(../iconos/plus.svg) no-repeat center;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+button > a{
+  text-decoration: none;
+  color: var(--color-secundario);
+}

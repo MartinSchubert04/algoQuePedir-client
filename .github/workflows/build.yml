@@ -1,0 +1,49 @@
+name: Build React App
+
+on: [push, pull_request]
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: ".nvmrc"
+
+      - name: Cache node modules
+        uses: actions/cache@v4
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright Browsers
+        run: npx playwright install --with-deps
+
+      - name: Force latest TypeScript version
+        run: npm install typescript@latest --save-dev
+
+      - name: Build project
+        run: npm run build:no-check
+
+      - name: Run tests and generate coverage
+        run: npm test -- --coverage
+
+      - name: Extract coverage %
+        id: extract
+        run: |
+          COVER=$(node -pe "require('./coverage/coverage-summary.json').total.lines.pct")
+          echo "COVERAGE=$COVER" >> $GITHUB_ENV
+
+      - name: Run END-TO-END tests (Playwright)
+        run: npm run test:e2e

@@ -1,0 +1,90 @@
+.user-criteria-label{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.user-criteria-container{
+    box-shadow: 0 0 .2em rgb(200, 200, 200);
+    border-radius: .2em;
+    padding: .5em;
+}
+
+.user-criteria-text{
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+}
+.criteria-name{
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+.criteria-checked {
+    height: 2em;
+    width: 2em;
+    border: 2px solid rgb(255, 86, 86);
+    border-radius: .3rem;
+    appearance: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.criteria-checked:checked {
+    border-color: rgb(255, 86, 86);
+    background-color: rgb(255, 86, 86);
+}
+
+.criteria-checked:checked::after {
+    content: "✔";
+    color: white;
+    font-size: 1.4em;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.distancia-max-container{
+    margin-top: 1em;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.distancia-controller-container{
+    display: flex;
+    gap: .5em;
+    align-items: center;
+}
+.distancia-controller-container > button{
+    width: 3em;
+    height: 3em;
+    border-radius: 100%;
+    border: .5px solid black;
+}
+.distancia-controller-container > p{
+    font-size: 1.2em;
+}
+
+.add-container{
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 2.5em;
+}
+.add-input-container{
+    height: 100%;
+}
+.add-input{
+    margin: 0;
+    height: 100%;
+}
+.add-button-container{
+    margin: 0;
+    height: 2.5em;
+    padding: 0;
+}

@@ -1,0 +1,13 @@
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 100%);
+  grid-auto-rows: 9rem;
+  justify-content: start;
+  padding: 0 1rem 1rem;
+  margin: 0 auto;
+  background-color: var(--color-primary);
+}
+
+.menu-grid .plato-card-container:not(:last-child) {
+  border-bottom: 1px solid var(--color-border);
+}

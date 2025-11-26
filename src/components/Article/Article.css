@@ -1,0 +1,33 @@
+.article-container-pedidos{
+    display: flex;
+    gap: 1em;
+    justify-content: space-between;
+    margin-top:1em;
+}
+.article-container{
+    display: flex;
+    gap: 1em;
+    justify-content: space-between;
+    margin-top:1em;
+}
+.art-data > h3{
+    padding-bottom: .3em;
+}
+.art-total{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.art-data p,
+.art-total p {
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #5f4545b4;
+    margin: .5em 0;
+}
+
+.art-total.art-pos {
+    margin: 0;
+}
