@@ -1,7 +1,7 @@
 # Algo Que Pedir Client
 
 ### Related repos
-The business-side view is [here](https://github.com/MartinSchubert04?tab=repositories) and the backend  is [here](https://github.com/MartinSchubert04?tab=repositories)
+The business-side view is [here](https://github.com/MartinSchubert04/algoQuePedir-business) and the backend  is [here](https://github.com/MartinSchubert04/algoQuePedir-backend)
 
 
 ## Project Description
